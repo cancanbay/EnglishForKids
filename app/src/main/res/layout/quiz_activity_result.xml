@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeated_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/box_shape"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHeading"
+            android:padding="6dp"
+            android:text="@string/str_results"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#673ab7"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAnsweredInfo"
+            android:layout_below="@+id/tvHeading"
+            android:text="@string/str_results"
+            android:padding="6dp"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="#d50000"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            android:layout_below="@+id/tvAnsweredInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:rating="0.0"/>
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_below="@+id/ratingBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.08"
+            android:text="Large Text"
+            android:padding="6dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_gotohome"
+            android:textColor="#ffffff"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:id="@+id/btnDone"
+            android:background="@drawable/btnblue"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_viewans"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnViewAnswer"
+            android:layout_alignBottom="@+id/btnDone"
+            android:layout_toRightOf="@+id/btnDone"
+            android:layout_toEndOf="@+id/btnDone"
+            android:textColor="#ffffff"
+            android:background="@drawable/btnpurple"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

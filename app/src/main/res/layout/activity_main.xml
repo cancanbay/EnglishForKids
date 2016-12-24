@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/repeated_bg"
+    >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_container"
+            >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TableRow android:gravity="center" android:layout_marginBottom="10dp">
+
+                        <ImageButton
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/daysandmonths"
+                            android:src="@drawable/gunler"
+                            android:layout_marginRight="50dp"
+                            android:scaleType="fitCenter"
+                            />
+                        <ImageButton
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/numbers"
+                            android:src="@drawable/_1"
+                            android:scaleType="fitCenter"
+                            />
+                </TableRow>
+                <TableRow android:gravity="center" android:layout_marginBottom="10dp" android:layout_marginLeft="45dp">
+                        <TextView
+                            android:text="Günler"
+                            />
+                        <TextView
+                            android:text="Sayılar"
+                            />
+
+                </TableRow>
+
+                <TableRow android:gravity="center" android:layout_marginBottom="10dp">
+                        <ImageButton
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/animals"
+                            android:src="@drawable/dog"
+                            android:layout_marginRight="50dp"
+                            android:scaleType="fitCenter"
+                            />
+                        <ImageButton
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/fruits"
+                            android:src="@drawable/apple"
+                            android:scaleType="fitCenter"
+                            />
+                </TableRow>
+                <TableRow android:gravity="center" android:layout_marginBottom="10dp"  android:layout_marginLeft="40dp">
+                        <TextView
+                            android:text="Hayvanlar"
+                            />
+                        <TextView
+                            android:text="Meyveler"
+                            />
+
+                </TableRow>
+                <TableRow android:gravity="center" android:layout_marginBottom="10dp">
+                        <ImageButton
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/bag"
+                            android:id="@+id/goods"
+                            android:layout_marginRight="50dp"
+                            android:scaleType="fitCenter"
+                            />
+                        <ImageButton
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/color"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/colors"
+                            />
+                </TableRow>
+                <TableRow android:gravity="center" android:layout_marginBottom="10dp"  android:layout_marginLeft="45dp">
+
+                        <TextView
+                            android:text="Eşyalar"
+                            />
+                        <TextView
+                            android:text="Renkler"
+                            />
+
+                </TableRow>
+                        <TableRow android:gravity="center" android:layout_marginBottom="5dp" >
+
+                               <Button
+                                   android:id="@+id/quizyap"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="QUIZ YAP"
+                                   android:background="@drawable/rounded_button"
+                                   />
+
+                        </TableRow>
+
+                </TableLayout>
+        </FrameLayout>
+
+</RelativeLayout>

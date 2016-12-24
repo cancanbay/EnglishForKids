@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.canbay.englishforkids.QuizMainActivity"
+    tools:showIn="@layout/quiz_app_bar_main"
+    android:background="@drawable/repeated_bg">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/box_shape"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAboutQuiz"
+            android:text="Sorular oldukça kolay. Şimdi başla butonuna basarak quiz'e başlayabilirsiniz."
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_start_now"
+        android:textColor="#ffffff"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:id="@+id/btnStart"
+        android:background="@drawable/btnblue"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

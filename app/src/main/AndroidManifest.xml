@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.canbay.englishforkids">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TabbedActivityDays"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".TabbedActivityNumbers"
+            android:label="@string/title_activity_tabbed_numbers"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabbedActivityAnimals"
+            android:label="@string/title_activity_tabbed_animals"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabbedActivityFruits"
+            android:label="@string/title_activity_tabbed_fruits"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabbedActivityGoods"
+            android:label="@string/title_activity_tabbed_goods"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuizMainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuizConceptActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuizResultActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuizViewAnswerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabbedActivityColors"
+            android:label="@string/title_activity_tabbed_colors"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

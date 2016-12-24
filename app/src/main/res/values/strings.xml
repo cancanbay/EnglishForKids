@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Çocuklar İçin İngilizce</string>
+    <string name="title_activity_tabbed">Günler</string>
+    <string name="action_settings">Quiz Yap</string>
+    <string name="section_format">Meyve-> %1$d</string>
+    <string name="title_activity_tabbed_numbers">Sayılar</string>
+    <string name="title_activity_tabbed_animals">Hayvanlar</string>
+    <string name="title_activity_tabbed_fruits">Meyveler</string>
+    <string name="title_activity_tabbed_goods">Eşyalar</string>
+    <string name="title_activity_tabbed_colors">Renkler</string>
+    <string name="txt_start_page">Quiz Ekranı </string>
+    <string name="str_start_now">Şimdi Başla</string>
+    <string name="str_next">İlerle</string>
+    <string name="str_done">Bitir</string>
+    <string name="str_results">Sonuçlar</string>
+    <string name="str_gotohome">Ana Sayfaya Dön</string>
+    <string name="str_viewans">Sonuçları Görüntüle</string>
+    <string name="navigation_drawer_open">Drawer Açılışı</string>
+    <string name="navigation_drawer_close">Drawer Kapanışı</string>
+</resources>
