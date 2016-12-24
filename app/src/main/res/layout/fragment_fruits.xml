@@ -14,9 +14,7 @@
         >
 
         <TableRow
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            >
+            android:layout_marginTop="20dp" android:gravity="center">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -24,20 +22,19 @@
                 android:text="Elma"
                 android:id="@+id/meyveturkce"
                 android:textStyle="bold"
+                android:textAlignment="center"
                 />
         </TableRow>
-        <TableRow
-            android:gravity="center">
+        <TableRow android:gravity="center">
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/apple"
                 android:id="@+id/meyvefotografi"
                 android:scaleType="fitCenter"
                 />
         </TableRow>
-        <TableRow
-            android:gravity="center">
+        <TableRow android:gravity="center">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -45,17 +42,18 @@
                 android:text="Apple"
                 android:id="@+id/meyveingilizce"
                 android:textStyle="bold"
-                android:layout_marginLeft="27dp"
+                android:textAlignment="center"
                 />
+        </TableRow>
+        <TableRow android:gravity="center">
             <ImageButton
-                android:layout_width="50dp"
+                android:layout_width="1dp"
                 android:layout_height="50dp"
                 android:id="@+id/playbutton"
                 android:src="@drawable/play"
                 android:scaleType="fitCenter"
+                android:textAlignment="center"
                 />
-
         </TableRow>
-
     </TableLayout>
 </LinearLayout>

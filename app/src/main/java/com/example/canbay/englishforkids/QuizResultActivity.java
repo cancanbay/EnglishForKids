@@ -83,7 +83,6 @@ public class QuizResultActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     @Override
