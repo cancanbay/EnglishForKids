@@ -14,10 +14,11 @@ public class Question {
     private String OptionB;
     private String OptionC;
     private String OptionD;
-    private ImageView QUESTIONImage;
+    private int QUESTIONImageId;
 
     public Question(){
         id=0;
+        QUESTIONImageId=0;
         QUESTION="";
         ANSWER="";
         OptionA="";
@@ -26,20 +27,11 @@ public class Question {
         OptionD="";
     }
 
-    public Question(String question, String opA, String opB, String opC,String opD,
+    public Question(int questionimageid,String question ,String opA, String opB, String opC, String opD,
                     String ansWer) {
 
+        QUESTIONImageId = questionimageid;
         QUESTION = question;
-        OptionA = opA;
-        OptionB = opB;
-        OptionC = opC;
-        OptionD = opD;
-        ANSWER = ansWer;
-    }
-    public Question(ImageView question, String opA, String opB, String opC, String opD,
-                    String ansWer) {
-
-        QUESTIONImage = question;
         OptionA = opA;
         OptionB = opB;
         OptionC = opC;
@@ -51,12 +43,12 @@ public class Question {
         return id;
     }
 
-    public ImageView getQUESTIONImage() {
-        return QUESTIONImage;
+    public int getQUESTIONImageId() {
+        return QUESTIONImageId;
     }
 
-    public void setQUESTIONImage(ImageView QUESTIONImage) {
-        this.QUESTIONImage = QUESTIONImage;
+    public void setQUESTIONImageId(int QUESTIONImageId) {
+        this.QUESTIONImageId = QUESTIONImageId;
     }
 
     public void setId(int id) {

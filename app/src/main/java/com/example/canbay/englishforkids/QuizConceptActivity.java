@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ public class QuizConceptActivity extends AppCompatActivity {
     private TextView txtQuestion,tvNoOfQs;
     private RadioButton rbtnA, rbtnB, rbtnC,rbtnD;
     private Button btnNext;
+    private ImageView questionImage;
 
     private int obtainedScore=0;
     private int questionId=0;
@@ -109,6 +111,9 @@ public class QuizConceptActivity extends AppCompatActivity {
     public void init(){
         tvNoOfQs=(TextView)findViewById(R.id.tvNumberOfQuestions);
         txtQuestion=(TextView)findViewById(R.id.tvQuestion);
+        questionImage = (ImageView) findViewById(R.id.questionImage);
+
+
         rbtnA=(RadioButton)findViewById(R.id.radio0);
         rbtnB=(RadioButton)findViewById(R.id.radio1);
         rbtnC=(RadioButton)findViewById(R.id.radio2);
@@ -130,6 +135,7 @@ public class QuizConceptActivity extends AppCompatActivity {
         answeredQsNo=questionId+1;
         tvNoOfQs.setText(answeredQsNo+". soru. Toplam Soru Sayısı: "+questionsList.size());
 
+        questionImage.setImageResource(currentQuestion.getQUESTIONImageId());
         txtQuestion.setText(currentQuestion.getQUESTION());
         rbtnA.setText(currentQuestion.getOptionA());
         rbtnB.setText(currentQuestion.getOptionB());

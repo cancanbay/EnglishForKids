@@ -4,34 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/repeated_bg">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:padding="10dp"
         android:background="@drawable/box_shape"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvNumberOfQuestions"
-            android:text="ICT questions"
+            android:text="Questions"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#673ab7"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvQuestion"
-            android:layout_below="@+id/tvNumberOfQuestions"
-            android:text="ICT questions"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:textStyle="normal"
-            android:textColor="#000000"/>
+            android:textColor="#673ab7"
+            />
 
         <RadioGroup
             android:id="@+id/radioGroup1"
@@ -40,6 +33,13 @@
             android:layout_below="@+id/tvQuestion"
             android:layout_marginTop="6dp"
             android:layout_weight="0.04" >
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton" />
+
             <RadioButton
                 android:id="@+id/radio0"
                 android:layout_width="match_parent"
@@ -55,12 +55,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RadioButton" />
-            <RadioButton
-                android:id="@+id/radio3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RadioButton" />
         </RadioGroup>
+
+        <ImageView
+            android:paddingTop="20dp"
+            android:paddingLeft="50dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/questionImage"
+            android:layout_below="@+id/tvNumberOfQuestions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQuestion"
+            android:text="Number of Questions"
+            android:textSize="18sp"
+            android:layout_marginTop="44dp"
+            android:textStyle="normal"
+            android:textColor="#000000"
+            android:layout_below="@+id/questionImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 
@@ -73,8 +92,8 @@
         android:paddingRight="6dp"
         android:id="@+id/btnNext"
         android:background="@drawable/btnblue"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/relativeLayout"
         android:layout_centerHorizontal="true" />
-
 
 </RelativeLayout>

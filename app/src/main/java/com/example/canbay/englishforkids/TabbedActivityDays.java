@@ -241,7 +241,7 @@ public class TabbedActivityDays extends AppCompatActivity {
                 gunfotografi = (ImageView) rootView.findViewById(R.id.gunfotografi);
                 playbutton = (ImageButton) rootView.findViewById(R.id.playbutton);
                 gunturkce.setText("Pazar");
-                guningilizce.setText("Monday");
+                guningilizce.setText("Sunday");
                 gunfotografi.setImageResource(R.drawable.pazar);
                 playbutton.setOnClickListener(new View.OnClickListener() {
                     @Override

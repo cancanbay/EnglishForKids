@@ -3,58 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fragmentbackground"
+    android:background="@drawable/repeated_bg"
     >
-
-
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-        <TableRow
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            >
+        <TableRow android:layout_marginTop="20dp" android:paddingTop="20dp" android:gravity="center">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:text="Çanta"
                 android:id="@+id/esyaturkce"
                 android:textStyle="bold"
+                android:textAlignment="center"
                 />
         </TableRow>
-        <TableRow
-            android:gravity="center">
+        <TableRow android:gravity="center" android:paddingTop="15dp">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/bag"
                 android:id="@+id/esyafotografi"
                 android:scaleType="fitCenter"
+                android:background="#BEF8CF"
                 />
         </TableRow>
-        <TableRow
-            android:gravity="center">
+        <TableRow android:gravity="center">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:text="Bag"
                 android:id="@+id/esyaingilizce"
                 android:textStyle="bold"
-                android:layout_marginLeft="27dp"
+                android:textAlignment="center"
                 />
+        </TableRow>
+        <TableRow android:gravity="center" android:paddingTop="25dp">
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/playbutton"
                 android:src="@drawable/play"
                 android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:background="#BEF8CF"
                 />
         </TableRow>
-
     </TableLayout>
 </LinearLayout>
