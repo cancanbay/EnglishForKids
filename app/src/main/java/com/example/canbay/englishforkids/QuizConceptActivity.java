@@ -51,7 +51,7 @@ public class QuizConceptActivity extends AppCompatActivity {
 
         //Initialize the database
         final DBAdapter dbAdapter=new DBAdapter(this);
-        questionsList= dbAdapter.getAllQuestions();
+        questionsList= dbAdapter.getRandomQuestions();
         currentQuestion=questionsList.get(questionId);
 
         //Set question
@@ -78,7 +78,7 @@ public class QuizConceptActivity extends AppCompatActivity {
                     }else{
                         Log.e("comments", "Yanlış Cevap");
                     }
-                    if(questionId<dbAdapter.rowCount()){
+                    if(questionId<10){
                         currentQuestion=questionsList.get(questionId);
                         setQuestionsView();
                     }else{

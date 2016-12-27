@@ -57,7 +57,9 @@ public class QuizViewAnswerActivity extends AppCompatActivity {
 
         //Initialize the database
         final DBAdapter dbAdapter=new DBAdapter(this);
-        questionsList= dbAdapter.getAllQuestions();
+        questionsList = DBAdapter.getQuestionList();
+      //  questionsList= dbAdapter.getRandomQuestions();
+
 
 
         for (int i = 0; i < questionsList.size(); i++) {
