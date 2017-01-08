@@ -308,6 +308,20 @@ public class TabbedActivityNumbers extends AppCompatActivity {
             }
 
         }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mpone.release();
+            mptwo.release();
+            mpthree.release();
+            mpfour.release();
+            mpfive.release();
+            mpsix.release();
+            mpseven.release();
+            mpeight.release();
+            mpnine.release();
+        }
     }
 
     /**

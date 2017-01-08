@@ -289,6 +289,20 @@ public class TabbedActivityAnimals extends AppCompatActivity {
             }
 
         }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mpgoat.release();
+            mpdonkey.release();
+            mpcow.release();
+            mpdog.release();
+            mpelephant.release();
+            mpfrog.release();
+            mphorse.release();
+            mplion.release();
+            mprooster.release();
+        }
     }
 
     /**

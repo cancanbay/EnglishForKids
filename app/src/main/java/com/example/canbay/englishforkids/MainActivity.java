@@ -17,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
     ImageView goods;
     ImageView colors;
     Button quizyap;
+    MediaPlayer number;
+    MediaPlayer animal;
+    MediaPlayer fruit;
+    MediaPlayer day;
+    MediaPlayer object;
+    MediaPlayer color;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
         colors = (ImageView) findViewById(R.id.colors);
         quizyap = (Button) findViewById(R.id.quizyap);
 
-        final MediaPlayer number = MediaPlayer.create(this,R.raw.numbers);
-        final MediaPlayer day = MediaPlayer.create(this,R.raw.days);
-        final MediaPlayer animal = MediaPlayer.create(this,R.raw.animals);
-        final MediaPlayer fruit = MediaPlayer.create(this,R.raw.fruits);
-        final MediaPlayer object = MediaPlayer.create(this,R.raw.objects);
-        final MediaPlayer color = MediaPlayer.create(this,R.raw.colors);
+        number = MediaPlayer.create(this,R.raw.numbers);
+        day = MediaPlayer.create(this,R.raw.days);
+        animal = MediaPlayer.create(this,R.raw.animals);
+        fruit = MediaPlayer.create(this,R.raw.fruits);
+        object = MediaPlayer.create(this,R.raw.objects);
+        color = MediaPlayer.create(this,R.raw.colors);
 
 
 
@@ -48,11 +54,6 @@ public class MainActivity extends AppCompatActivity {
         final Intent intentobjects = new Intent(this,TabbedActivityGoods.class);
         final Intent intentcolors = new Intent(this,TabbedActivityColors.class);
         final Intent quizsayfasi = new Intent(this,QuizMainActivity.class);
-
-
-
-
-
 
 
         daysandmonths.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +113,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(quizsayfasi);
             }
         });
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        day.release();
+        number.release();
+        animal.release();
+        fruit.release();
+        object.release();
+        color.release();
 
     }
 }

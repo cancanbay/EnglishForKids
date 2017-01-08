@@ -251,8 +251,18 @@ public class TabbedActivityDays extends AppCompatActivity {
                 });
                 return rootView;
             }
+        }
 
-
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mpsunday.release();
+            mpmonday.release();
+            mptuesday.release();
+            mpwednesday.release();
+            mpthursday.release();
+            mpfriday.release();
+            mpsaturday.release();
         }
     }
     /**

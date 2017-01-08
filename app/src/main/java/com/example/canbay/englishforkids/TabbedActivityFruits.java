@@ -231,6 +231,17 @@ public class TabbedActivityFruits extends AppCompatActivity {
                 return rootView;
             }
         }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mpapple.release();
+            mpbanana.release();
+            mpcherry.release();
+            mpcoconut.release();
+            mpgrape.release();
+            mpmelon.release();
+        }
     }
 
     /**

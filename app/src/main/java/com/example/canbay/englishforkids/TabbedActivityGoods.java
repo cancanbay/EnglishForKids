@@ -252,6 +252,18 @@ public class TabbedActivityGoods extends AppCompatActivity {
                 return rootView;
             }
         }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mpbag.release();
+            mpbicycle.release();
+            mpcamera.release();
+            mperaser.release();
+            mpmicroscope.release();
+            mpnotebook.release();
+            mppencilsharpener.release();
+        }
     }
 
     /**

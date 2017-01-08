@@ -251,6 +251,19 @@ public class TabbedActivityColors extends AppCompatActivity {
                 return rootView;
             }
         }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            mpblue.release();
+            mpgreen.release();
+            mppink.release();
+            mppurple.release();
+            mpwhite.release();
+            mpred.release();
+            mpyellow.release();
+
+        }
     }
 
     /**
