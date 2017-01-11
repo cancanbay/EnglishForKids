@@ -37,7 +37,7 @@ public class QuizResultActivity extends AppCompatActivity {
         TextView tvAnsweredInfo =(TextView)findViewById(R.id.tvAnsweredInfo);
         TextView t=(TextView)findViewById(R.id.textResult);
 
-        //get score
+        //get score with the bundle
         Bundle b = getIntent().getExtras();
         int score= b.getInt("score");
         int totalQs= b.getInt("totalQs");
@@ -64,12 +64,14 @@ public class QuizResultActivity extends AppCompatActivity {
             t.setText("Skorun düşük, daha fazla çalışmalısın!");
         }
 
-
+        final Intent intent = new Intent(this,MainActivity.class);
         Button btnDone=(Button)findViewById(R.id.btnDone);
         btnDone.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                finish();
+
+                startActivity(intent);
             }
         });
 

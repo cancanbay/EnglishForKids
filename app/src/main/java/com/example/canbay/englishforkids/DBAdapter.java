@@ -19,10 +19,10 @@ import android.widget.ImageView;
  */
 public class DBAdapter extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 12;
+    private static final int DATABASE_VERSION = 1;
 
     // Database Name
-    private static final String DATABASE_NAME = "onlineicttutorQuiz";
+    private static final String DATABASE_NAME = "CocuklarIcinIngilizceQuiz";
 
     // Table name
     private static final String TABLE_QUESTION = "question";
@@ -76,6 +76,7 @@ public class DBAdapter extends SQLiteOpenHelper {
         return row;
     }
     static List<Question> copy;
+    // copying random list to the see true/wrong answers..
     public static List<Question> pickNRandom(List<Question> lst, int n) {
         copy = new ArrayList<Question>(lst);
         Collections.shuffle(copy);
@@ -125,50 +126,9 @@ public class DBAdapter extends SQLiteOpenHelper {
         return copy;
     }
 
-
-
-
-/*
-    public List<Question> getRandomQuestions() {
-
-        int i=0;
-        List<Question> quesList = new ArrayList<Question>();
-
-
-
-        // Select All Query
-        String selectQuery = "SELECT  * FROM " + TABLE_QUESTION;
-        myDatabase=this.getReadableDatabase();
-
-        Cursor cursor = myDatabase.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
-        if (i<3) {
-            i++;
-            do {
-                Question quest = new Question();
-                quest.setId(cursor.getInt(0));
-                quest.setQUESTIONImageId(cursor.getInt(1));
-                quest.setQUESTION(cursor.getString(2));
-                quest.setANSWER(cursor.getString(3));
-                quest.setOptionA(cursor.getString(4));
-                quest.setOptionB(cursor.getString(5));
-                quest.setOptionC(cursor.getString(6));
-                quest.setOptionD(cursor.getString(7));
-
-                quesList.add(quest);
-
-            } while (cursor.moveToNext());
-
-        }
-        // return quest list
-        List<Question> randomList = pickNRandom(quesList,3);
-        return randomList;
-    } */
-
-
     private void addQuestionsWithImage()
     {
+        // adding new questions
         //format is question-option1-option2-option3-option4-answer
 
         Question q1=new Question(R.drawable.apple,"Yukarıdaki meyvenin ingilizcesi aşağıdakilerden hangisidir?","Grape", "Apple", "Raspberry", "Melon","Apple");
@@ -267,6 +227,7 @@ public class DBAdapter extends SQLiteOpenHelper {
 
     public void addQuestionWithImage(Question quest) {
 
+        // Inserting attributes to the table Question
         ContentValues values = new ContentValues();
         values.put(KEY_QUESION_Imageid,quest.getQUESTIONImageId());
         values.put(KEY_QUESION, quest.getQUESTION());

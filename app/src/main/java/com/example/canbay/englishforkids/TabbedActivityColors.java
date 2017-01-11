@@ -1,5 +1,6 @@
 package com.example.canbay.englishforkids;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -99,6 +100,8 @@ public class TabbedActivityColors extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this,QuizMainActivity.class);
+            startActivity(intent);
             return true;
         }
 
